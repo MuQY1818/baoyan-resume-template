@@ -3,6 +3,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/MuQY1818/baoyan-resume-template?style=social)](https://github.com/MuQY1818/baoyan-resume-template/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Use this template](https://img.shields.io/badge/GitHub-Use%20this%20template-2ea44f)](https://github.com/MuQY1818/baoyan-resume-template/generate)
+[![Open in Overleaf](https://img.shields.io/badge/Open%20in-Overleaf-47A141)](https://www.overleaf.com/docs?snip_uri=https%3A%2F%2Fraw.githubusercontent.com%2FMuQY1818%2Fbaoyan-resume-template%2Fmain%2Fassets%2Fbaoyan-resume-template-overleaf.zip&engine=xelatex&main_document=main.tex)
 
 一个偏传统中文简历风格的 LaTeX 模板，适合保研、夏令营、预推免、导师套磁等场景。模板采用深蓝色章节标题、横线分隔、右上证件照区域、经历标题与日期右对齐的排版。
 
@@ -27,7 +28,8 @@
 ├── main.tex          # 简历正文示例，直接改这里
 ├── resume_blue.cls   # 模板样式
 ├── assets/
-│   └── preview.png   # README 示例图
+│   ├── preview.png   # README 示例图
+│   └── baoyan-resume-template-overleaf.zip  # Overleaf 一键导入包
 ├── .latexmkrc        # latexmk 编译配置
 ├── LICENSE
 └── README.md
@@ -35,7 +37,15 @@
 
 ## 使用方法
 
+### 方式一：Overleaf 一键导入
+
+点击 README 顶部的 **Open in Overleaf** 徽章，可以直接在 Overleaf 中创建项目。导入链接已指定 `XeLaTeX` 和 `main.tex`。
+
+### 方式二：GitHub Template
+
 点击右上角 **Use this template** 可以直接基于本仓库创建自己的简历仓库。
+
+### 方式三：本地编译
 
 安装 TeX Live 或 MacTeX 后，在项目根目录运行：
 
