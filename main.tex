@@ -1,0 +1,130 @@
+\documentclass{resume_blue}
+\usepackage{ctex}
+\usepackage{fontspec}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage[left=0.58in,top=0.38in,right=0.58in,bottom=0.38in]{geometry}
+
+\hypersetup{colorlinks=true,urlcolor=ResumeBlue,linkcolor=ResumeBlue}
+
+\IfFontExistsTF{KaiTi_GB2312}{%
+  \setCJKmainfont[AutoFakeBold=2.2]{KaiTi_GB2312}
+  \setCJKfamilyfont{resumeKai}[AutoFakeBold=2.2]{KaiTi_GB2312}
+}{%
+  \setCJKmainfont[AutoFakeBold=2.2]{FandolKai-Regular}
+  \setCJKfamilyfont{resumeKai}[AutoFakeBold=2.2]{FandolKai-Regular}
+}
+
+\newcommand*\Metric[1]{\BlueMetric{#1}}
+\newcommand*\Field[2]{\item {\CJKfamily{resumeKai}\bfseries #1：}#2}
+\newcommand*\HeavyKai[1]{{\CJKfamily{resumeKai}\bfseries #1}}
+\newcommand*\EntryTitle[1]{{\fontsize{9.65pt}{10.2pt}\selectfont\HeavyKai{#1}}}
+\newcommand*\SubBullet{\item[\textcolor{ResumeBlue}{\raisebox{0.2ex}{\scriptsize$\bullet$}}]}
+\newcommand*\LabelBold[1]{\HeavyKai{#1：}}
+\newcommand*\EduMetric[2]{{\bfseries #1：}#2}
+\setlength{\parskip}{0pt}
+\setlength{\parindent}{0pt}
+\setlength{\parfillskip}{0pt plus 0.45\linewidth}
+\setlist[itemize]{leftmargin=1.25em,nosep,topsep=0.2mm,parsep=0pt,partopsep=0pt,itemsep=0.38mm}
+
+\begin{document}
+\color{ResumeText}
+\CJKfamily{resumeKai}
+\fontsize{9.45pt}{11.45pt}\selectfont
+
+\noindent
+\begin{minipage}[c]{0.76\textwidth}
+  {\fontsize{23pt}{24pt}\selectfont\HeavyKai{张小明}}
+
+  \vspace{0.65mm}
+  {\small 某某大学，计算机科学与技术学院}
+
+  \vspace{1.05mm}
+  {\small
+  \renewcommand{\arraystretch}{1.06}
+  \begin{tabular}{@{}>{\bfseries}r@{\hspace{0.35em}}l@{\hspace{2.6em}}>{\bfseries}r@{\hspace{0.35em}}l@{}}
+    出生年月：& 2004年1月 & 政治面貌：& 共青团员 \\
+    联系电话：& 13800000000 & 电子邮箱：& xiaoming@example.com \\
+    微信：& xiaoming-demo & GitHub：& \href{https://github.com/example}{example}
+  \end{tabular}}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.18\textwidth}
+  \raggedleft
+  \fbox{\begin{minipage}[c][3.0cm][c]{2.35cm}\centering\small 证件照\end{minipage}}
+\end{minipage}
+
+\vspace{0.6mm}
+
+\begin{rSection}{教育背景}
+\ResumeEntry{某某大学 \quad 本科，计算机科学与技术}{2022年9月 - 至今}
+\begin{itemize}
+  \item \EduMetric{成绩排名}{\Metric{3/120（前2.50\%）}}，加权平均分 92.50，GPA 4.50/5.0。
+  \item \EduMetric{核心课程}{高等数学 (98)、线性代数 (96)、数据结构 (95)、操作系统 (94)、人工智能基础 (97)}
+  \item \EduMetric{英语水平}{CET-6 520分}；\EduMetric{认证水平}{CCF-CSP 320分（前5\%）}
+\end{itemize}
+\end{rSection}
+
+\begin{rSection}{专业技能}
+\begin{itemize}
+  \Field{研究方向}{数据挖掘、推荐系统与机器学习工程，关注图学习、时序建模和可信评测。}
+  \Field{模型与实验}{熟悉 PyTorch、scikit-learn、Pandas，具备模型训练、指标评估和实验复现经验。}
+  \Field{工程能力}{熟悉 Python、C/C++、SQL，具备数据处理、后端开发、可视化分析与技术文档写作能力。}
+\end{itemize}
+\end{rSection}
+
+\begin{rSection}{科研经历}
+\ResumeDatedEntry{\EntryTitle{一、图神经网络驱动的学术论文推荐方法（一作，会议接收）}}{2025年9月 - 2026年3月}
+\begin{itemize}
+  \SubBullet \LabelBold{研究内容}面向论文检索中的冷启动与语义稀疏问题，设计融合文本表示和引用关系的图学习推荐框架。
+  \SubBullet \LabelBold{承担工作}作为一作主导问题定义、数据清洗、模型实现、对比实验与论文写作，完成消融和可视化分析。
+  \SubBullet \LabelBold{核心成果}在公开论文推荐数据集上取得稳定提升，相关论文被计算机应用方向会议接收。
+\end{itemize}
+
+\ResumeDatedEntry{\EntryTitle{二、面向工业时序数据的异常检测模型（共一，期刊在审）}}{2025年12月 - 至今}
+\begin{itemize}
+  \SubBullet \LabelBold{研究内容}针对传感器时序数据噪声大、异常样本少的问题，构建多尺度特征建模与鲁棒检测方法。
+  \SubBullet \LabelBold{承担工作}以共一身份负责方法设计、代码实现、数据预处理、实验评估与论文撰写。
+  \SubBullet \LabelBold{核心成果}在多个公开时序异常检测数据集上取得有竞争力结果，相关论文投稿期刊在审。
+\end{itemize}
+
+\ResumeDatedEntry{\EntryTitle{三、高并发场景下的缓存一致性优化（三作，系统会议在审）}}{2025年6月 - 2025年12月}
+\begin{itemize}
+  \SubBullet \LabelBold{研究内容}面向高并发读写场景中的缓存击穿和一致性维护问题，设计轻量级失效检测与更新策略。
+  \SubBullet \LabelBold{承担工作}参与系统模块实现、压测脚本编写、性能指标统计和实验结果整理。
+  \SubBullet \LabelBold{核心成果}在模拟业务负载下显著降低尾延迟，相关工作投稿系统方向会议在审。
+\end{itemize}
+
+\ResumeDatedEntry{\EntryTitle{四、联邦学习中的隐私保护策略评估（一作，进行中）}}{2024年6月 - 至今}
+\begin{itemize}
+  \SubBullet \LabelBold{研究内容}分析不同隐私预算下联邦学习模型的精度退化与通信开销，构建统一评测流程。
+  \SubBullet \LabelBold{承担工作}作为一作负责实验框架搭建、参数敏感性分析、结果可视化和论文初稿撰写。
+\end{itemize}
+\end{rSection}
+
+\begin{rSection}{项目经历}
+\ResumeDatedEntry{\EntryTitle{一、校园课程助手平台：课表管理与学习提醒（独立完成）}}{2025年12月 - 2026年1月}
+\begin{itemize}
+  \SubBullet \LabelBold{项目内容}独立开发课程表管理、作业提醒和成绩统计模块，支持多端数据同步和可视化展示。
+  \SubBullet \LabelBold{实践收获}完成从需求分析、数据库设计、后端接口到前端交互的完整工程闭环。
+\end{itemize}
+
+\ResumeDatedEntry{\EntryTitle{二、大学生创新项目：开源数据分析平台（主要研发人员）}}{2025年7月 - 2026年1月}
+\begin{itemize}
+  \SubBullet \LabelBold{承担工作}负责数据导入、指标计算、图表看板和用户权限模块，实现常用统计分析流程。
+  \SubBullet \LabelBold{核心成果}项目获得国家级竞赛奖项，支撑完整系统演示与答辩材料。
+\end{itemize}
+\end{rSection}
+
+\begin{rSection}{奖励荣誉}
+\begin{itemize}
+  \item 国家级大学生创新创业竞赛一等奖 \hfill 2025年10月
+  \item 某高校暑期学校优秀学员/学术潜力奖 \hfill 2025年7月
+  \item 国际大学生程序设计竞赛区域赛铜奖 \hfill 2025年3月
+  \item 算法竞赛公开榜单 Top 5\% \hfill 2025年9月
+  \item 省级大学生数学竞赛二等奖 \hfill 2024年6月
+\end{itemize}
+\end{rSection}
+
+\end{document}
