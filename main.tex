@@ -23,6 +23,8 @@
 \newcommand*\SubBullet{\item[\textcolor{ResumeBlue}{\raisebox{0.2ex}{\scriptsize$\bullet$}}]}
 \newcommand*\LabelBold[1]{\HeavyKai{#1：}}
 \newcommand*\EduMetric[2]{{\bfseries #1：}#2}
+\newcommand*\InfoLabel[1]{\makebox[4em][s]{#1}：}
+\newcommand*\InfoLabelEn[1]{\makebox[4em][l]{#1}：}
 \setlength{\parskip}{0pt}
 \setlength{\parindent}{0pt}
 \setlength{\parfillskip}{0pt plus 0.45\linewidth}
@@ -43,10 +45,10 @@
   \vspace{1.05mm}
   {\small
   \renewcommand{\arraystretch}{1.06}
-  \begin{tabular}{@{}>{\bfseries}r@{\hspace{0.35em}}l@{\hspace{2.6em}}>{\bfseries}r@{\hspace{0.35em}}l@{}}
-    出生年月：& 2004年1月 & 政治面貌：& 共青团员 \\
-    联系电话：& 13800000000 & 电子邮箱：& xiaoming@example.com \\
-    微信：& xiaoming-demo & GitHub：& \href{https://github.com/example}{example}
+  \begin{tabular}{@{}>{\bfseries}l@{\hspace{0.35em}}l@{\hspace{2.6em}}>{\bfseries}l@{\hspace{0.35em}}l@{}}
+    \InfoLabel{出生年月}& 2004年1月 & \InfoLabel{政治面貌}& 共青团员 \\
+    \InfoLabel{联系电话}& 13800000000 & \InfoLabel{电子邮箱}& xiaoming@example.com \\
+    \InfoLabel{微信号}& xiaoming-demo & \InfoLabelEn{GitHub}& \href{https://github.com/example}{example}
   \end{tabular}}
 \end{minipage}
 \hfill
